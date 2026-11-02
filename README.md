@@ -31,6 +31,8 @@ Ein voxelbasiertes 3D-Sandbox-Spiel für den Desktop-Browser. Das Projekt verwen
 - Animierte Schafe, Kühe und Schweine mit beweglichen Beinen, Köpfen und eigenständigem Umherlaufen.
 - Animierter First-Person-Arm mit Laufbewegung, Armschwung beim Bauen und Abbauen sowie Schrittbewegung der Kamera.
 - Platzierte Blöcke wachsen mit einer kurzen Einblendanimation in die Welt.
+- Eine goldene Kontur hebt den anvisierten Block hervor; eine transparente Vorschau zeigt, wo der nächste Block platziert wird.
+- Bewegte, volumetrische 3D-Wolken ziehen über die Landschaft.
 - Beim Abbauen entstehen passende Partikeleffekte.
 - Dynamischer Tag-Nacht-Zyklus mit veränderter Himmelsfarbe und Beleuchtung.
 
