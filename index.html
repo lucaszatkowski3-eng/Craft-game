@@ -66,7 +66,7 @@ function makeWorld(seed){generateWorld(seed);dayClock=0;health=20;hunger=20;reso
 function buildHotbar(){let el=$('hotbar');el.innerHTML='';for(let i=0;i<9;i++){let id=hotbar[i],b=blockDef(BLOCKS.findIndex(x=>x[0]===id)),item=itemDef(id),icon=item?item[1]:b[2];let s=document.createElement('div');s.className='slot'+(i===selected?' active':'');s.innerHTML='<span class="num">'+(i+1)+'</span>'+icon+'<small>'+(worldMode==='survival'?(resources[id]||0):'∞')+'</small>';s.onclick=()=>{selected=i;buildHotbar()};el.appendChild(s)}}
 let hotbar=['grass','dirt','stone','oak_log','oak_leaves','planks','sand','glass','glowstone'];
 
-const ITEMS={wood_sword:['Holzschwert','🗡️'],stone_sword:['Steinschwert','⚔️'],iron_sword:['Eisenschwert','🗡️'],diamond_sword:['Diamantschwert','💎'],wood_pickaxe:['Holzspitzhacke','⛏️'],stone_pickaxe:['Steinspitzhacke','⛏️'],iron_pickaxe:['Eisenspitzhacke','⛏️'],iron_ingot:['Eisenbarren','🔩'],copper_ingot:['Kupferbarren','🟠'],tin_ingot:['Zinnbarren','⚪'],ruby:['Rubin','♦️'],crystal_shard:['Kristallsplitter','💠']};
+const ITEMS={stick:['Stock','🪵'],leather:['Leder','🟫'],meat:['Proviant','🍖'],wood_sword:['Holzschwert','🗡️'],stone_sword:['Steinschwert','⚔️'],iron_sword:['Eisenschwert','🗡️'],diamond_sword:['Diamantschwert','💎'],wood_pickaxe:['Holzspitzhacke','⛏️'],stone_pickaxe:['Steinspitzhacke','⛏️'],iron_pickaxe:['Eisenspitzhacke','⛏️'],iron_ingot:['Eisenbarren','🔩'],copper_ingot:['Kupferbarren','🟠'],tin_ingot:['Zinnbarren','⚪'],ruby:['Rubin','♦️'],crystal_shard:['Kristallsplitter','💠']};
 let resources={},health=20,hunger=20,hungerClock=0,mobs=[],particles=[],arms=null,armSwing=0,walkPhase=0,craftTab='basic';
 const RECIPES=[
 {id:'planks',tab:'basic',name:'Holzbretter ×4',out:'planks',count:4,need:{oak_log:1}},
