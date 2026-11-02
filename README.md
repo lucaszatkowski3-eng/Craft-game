@@ -5,7 +5,7 @@ Ein voxelbasiertes 3D-Sandbox-Spiel für den Desktop-Browser. Das Projekt verwen
 ## Starten
 
 - Repository über GitHub Pages veröffentlichen oder lokal mit einem Webserver starten.
-- `index.html` im aktuellen Desktop-Browser öffnen.
+- `index.html` im aktuellen Browser öffnen (Desktop, Handy oder Tablet).
 - Für Three.js und die Schriftarten wird beim Laden eine Internetverbindung benötigt.
 - Über **Welt erstellen / spielen** eine Welt anlegen. Die Modusauswahl erscheint anschließend.
 
