@@ -1,24 +1,38 @@
 # BLOCKWORLD
 
-Ein eigenständiges 3D-Voxel-Sandbox-Spiel für den Desktop-Browser. Das Projekt verwendet HTML, CSS und JavaScript; die 3D-Darstellung läuft mit Three.js.
+Ein voxelbasiertes 3D-Sandbox-Spiel für den Desktop-Browser. Das Projekt verwendet HTML, CSS und JavaScript mit Three.js für die 3D-Darstellung.
 
-## Spielen
+## Starten
 
-- Am einfachsten über GitHub Pages veröffentlichen oder lokal mit einem kleinen Webserver starten.
-- Danach `index.html` im aktuellen Desktop-Browser öffnen.
-- Für die 3D-Grafik und Schriftarten ist beim Laden eine Internetverbindung erforderlich (Three.js und Google Fonts werden extern geladen).
-- Im Hauptmenü **Welt erstellen / spielen** wählen, einen Weltnamen eingeben und mit der Maus ins Spiel wechseln.
+- Repository über GitHub Pages veröffentlichen oder lokal mit einem Webserver starten.
+- `index.html` im aktuellen Desktop-Browser öffnen.
+- Für Three.js und die Schriftarten wird beim Laden eine Internetverbindung benötigt.
+- Über **Welt erstellen / spielen** eine Welt anlegen. Die Modusauswahl erscheint anschließend.
 
-## Spielsysteme
+## Spielmodi
 
-- Prozedural erzeugte, 56 × 56 Blöcke große Landschaft mit unterschiedlichen Landschaftszonen (Wald, Ebene, Wüste und Schneegebiete).
-- Über 60 auswählbare Blocktypen, darunter Holzarten, Erze, Baumaterialien, Schnee, Eis, Glas und Dekoration.
-- Blöcke mit linker Maustaste abbauen und mit rechter Maustaste platzieren.
-- Hotbar mit neun Schnellzugriffsfeldern sowie ein Block-Inventar zum Auswählen.
-- Tag-Nacht-Beleuchtung mit wechselnder Helligkeit und Himmelsfarbe.
-- First-Person-Steuerung mit Laufen, Sprinten, Springen und Mausblick.
-- Individuell belegbare Tastaturaktionen, einstellbare Mausempfindlichkeit und Sichtfeld.
-- Lokales Speichern und Laden über IndexedDB; Welt, Position, Hotbar, Einstellungen und Tastenbelegung bleiben auf dem Gerät.
+### Kreativmodus
+- Alle Blocktypen stehen unbegrenzt zur Verfügung.
+- Bauen und Abbauen ohne Ressourcenverbrauch.
+
+### Survivalmodus
+- Blöcke abbauen, um Ressourcen zu sammeln.
+- Platzierte Blöcke werden aus dem Vorrat abgezogen.
+- Hunger sinkt mit der Zeit; bei leerem Hunger sinkt auch die Lebensenergie.
+- Bei ausreichend gefülltem Hunger regeneriert sich die Lebensenergie langsam.
+- Beerensträucher liefern Äpfel. Mit **F** kann ein Apfel gegessen werden.
+- Über **C** öffnet sich die Werkbank mit Rezepten für Bretter, Stöcke, Glas, Ziegel, Steinziegel, Moosstein, Bücherregale, Laternen und Leuchtsteine.
+
+## Welt und Animationen
+
+- Prozedural erzeugte Karte mit 56 × 56 Blöcken und Wald-, Ebenen-, Wüsten- und Schneegebieten.
+- 64+ Blocktypen, darunter verschiedene Holzarten, Erze, Baumaterialien, Schnee, Eis, Glas und Dekoration.
+- Neun Schnellzugriffsfelder und Block-Inventar.
+- Animierte Schafe, Kühe und Schweine mit beweglichen Beinen, Köpfen und eigenständigem Umherlaufen.
+- Animierter First-Person-Arm mit Laufbewegung, Armschwung beim Bauen und Abbauen sowie Schrittbewegung der Kamera.
+- Platzierte Blöcke wachsen mit einer kurzen Einblendanimation in die Welt.
+- Beim Abbauen entstehen passende Partikeleffekte.
+- Dynamischer Tag-Nacht-Zyklus mit veränderter Himmelsfarbe und Beleuchtung.
 
 ## Standardsteuerung
 
@@ -29,17 +43,19 @@ Ein eigenständiges 3D-Voxel-Sandbox-Spiel für den Desktop-Browser. Das Projekt
 | Sprinten | Shift |
 | Block abbauen | Linke Maustaste |
 | Block platzieren | Rechte Maustaste |
-| Inventar öffnen | E |
-| Hotbar auswählen | 1–9 oder Mausrad |
+| Inventar | E |
+| Werkbank im Survivalmodus | C |
+| Apfel essen | F |
+| Hotbar | 1–9 oder Mausrad |
 | Speichern | F5 |
 | Pause | Esc |
 
-Die Tastaturbelegung lässt sich im Hauptmenü unter **Steuerung** ändern.
+Tastaturaktionen lassen sich im Hauptmenü unter **Steuerung** neu belegen.
 
-## Lokale Daten
+## Speichern und Datenschutz
 
-Es gibt kein Benutzerkonto und keinen Spielserver. Die Welt wird im Browser-Speicher des jeweiligen Geräts abgelegt. Browserdaten löschen, privates Surfen oder ein Gerätewechsel können gespeicherte Welten entfernen. Export/Import von Spielständen ist derzeit nicht eingebaut.
+Die Welt, Position, Hotbar, Ressourcen, Lebens-/Hungerwerte, Einstellungen und Tastenbelegung werden lokal über IndexedDB gespeichert. Es gibt kein Benutzerkonto und keinen Spielserver. Browserdaten löschen, privates Surfen oder ein Gerätewechsel können Spielstände entfernen. Ein Export/Import ist derzeit nicht vorhanden.
 
-## Technik und Grenzen
+## Aktueller Entwicklungsstand
 
-Der Spielcode und die Oberfläche liegen in `index.html`; Three.js wird über jsDelivr geladen. Das Projekt ist ein spielbarer Sandbox-Prototyp und kein offizielles Minecraft-Produkt. Es enthält noch kein vollständiges Survival-System, Crafting, Tiere/Gegner, Multiplayer oder unendliche Chunk-Welten. Die Welt ist derzeit eine begrenzte, prozedural generierte Karte.
+BLOCKWORLD ist ein spielbarer Browser-Prototyp und kein offizielles Minecraft-Produkt. Noch nicht enthalten sind unter anderem Multiplayer, unendliche Chunk-Welten, komplexe Werkzeuge mit Haltbarkeit, vollständige Gegner-KI, Höhlen-/Dungeon-Systeme und ein ausgebautes Quest-/Fortschrittssystem. Die Tiere sind derzeit friedliche, wandernde Kreaturen.
